@@ -29,3 +29,7 @@ async def get_level_by_id(id):
 @app.post("/api/level")
 async def post_level(level):
     return 1
+
+@app.put("/api/level")
+async def update_level(id):
+    return 1
