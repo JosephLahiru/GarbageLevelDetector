@@ -18,3 +18,14 @@ app.add_middleware(
 def read_root():
     return {"Ping":"Pong"}
 
+@app.get("/api/level")
+async def get_level():
+    return 1
+
+@app.get("/api/level{id}")
+async def get_level_by_id(id):
+    return 1
+
+@app.post("/api/level")
+async def post_level(level):
+    return 1
