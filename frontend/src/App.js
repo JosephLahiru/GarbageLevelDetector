@@ -18,7 +18,7 @@ function App() {
   });
 
   const addBinHandler = () => {
-    axios.post('http://localhost:8000/api/bin', {'id':id,
+    axios.post('http://localhost:8000/api/bin/', {'id':id,
   'level':level}).then(res => console.log(res))
   };
 
@@ -34,7 +34,7 @@ function App() {
         <h5 className="card text-white bg-dark mb-3">Add A Garbage Bin</h5>
         <span className="card-text">
           <input className="mb-2 form-control idIn" onChange={event => setId(event.target.value)} placeholder="ID"/>
-          <input className="mb-2 form-control desIn" onChange={event => setLevel(event.target.value)} placeholder="LEVEL"/>
+          <input className="mb-2 form-control levelIn" onChange={event => setLevel(event.target.value)} placeholder="LEVEL"/>
 
           <button className="btn btn-outline-primary mx-2 mb-3" style={
           {'borderRadius':"50px", "font-weight":"bold"}} onClick={addBinHandler}>Add Bin</button>
