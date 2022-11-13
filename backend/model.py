@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
-class Level(BaseModel):
+class Bin(BaseModel):
     id: str
     level: str

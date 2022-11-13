@@ -1,4 +1,4 @@
-from model import Level
+from model import Bin
 import os
 from dotenv import load_dotenv
 
@@ -8,26 +8,26 @@ load_dotenv()
 import motor.motor_asyncio
 
 client = motor.motor_asyncio.AsyncIOMotorClient(os.getenv('MONGO_URI'))
-database = client.Levels
-collection = database.level
+database = client.Bins
+collection = database.bin
 
-async def fetch_one_level(id):
+async def fetch_one_bin(id):
     document = await collection.find_one({"id":id})
     return document
 
-async def fetch_all_levels():
-    levels = []
+async def fetch_all_bins():
+    bins = []
     curser = collection.find({})
     async for document in curser:
-        levels.append(Level(**document))
-    return levels
+        bins.append(Bin(**document))
+    return bins
 
-async def create_level(level):
-    document = level
+async def create_bin(bin):
+    document = bin
     result = await collection.insert_one(document)
     return result
 
-async def update_level(id, level):
+async def update_bin(id, level):
     await collection.update_one({"id":id}, {"$set":{
         "level":level}})
     document = await collection.find_one({"id":id})
