@@ -32,3 +32,7 @@ async def update_bin(id, level):
         "level":level}})
     document = await collection.find_one({"id":id})
     return document
+
+async def remove_bin(id):
+    await collection.delete_one({"id": id})
+    return True
