@@ -9,17 +9,20 @@ from database import (
     fetch_one_bin,
     fetch_all_bins,
     create_bin,
-    update_bin
+    update_bin,
+    remove_bin,
 )
 
-origins = ['https://localhost:3000']
+origins = ['http://localhost:3000',
+            'http://localhost',
+]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials = True,
+    allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 @app.get("/")
@@ -52,3 +55,10 @@ async def put_bin(id:str, level:str):
     if(response):
         return response
     raise HTTPException(404, f"There is no Bin item in this ID : {id}")
+
+@app.delete("/api/bin/{id}")
+async def delete_bin(id):
+    response = await remove_bin(id)
+    if response:
+        return "Successfully deleted bin"
+    raise HTTPException(404, f"There is no bin with the ID {id}")
