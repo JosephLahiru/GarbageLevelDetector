@@ -1,11 +1,14 @@
 import BinItem from "./Bin";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BinView(props){
     return (
         <div>
-            <ul>
-                {props.binList.map(bin => <BinItem bin={bin}/>)}
-            </ul>
+            <div className="container">
+                <div className="row">
+                    {props.binList.map(bin => <BinItem bin={bin}/>)}
+                </div>
+            </div>
         </div>
     )
 }

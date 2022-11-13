@@ -5,3 +5,5 @@ uvicorn == 0.14.0
 motor == 2.4.0
 
 dnspython==2.0.0
+
+colorama==0.4.6
