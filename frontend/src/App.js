@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className='App list-group-item justify-content-center
-    aligh-items-center mx-auto' style={{"width":"400px",
+    aligh-items-center mx-auto' style={{"width":"600px",
     "backgroundColor":"white", "marginTop":"15px"}}>
       <h1 className="card text-white bg-info mb-1"
       styleName="max-width: 20rem;">GARBAGE LEVEL DETECTOR</h1>
@@ -45,7 +45,7 @@ function App() {
           <BinView binList={binList}/>
         </div>
       </div>
-      <h6 className="card text-dark bg-warning py-1 mb-0">Copyright 2022, All rights reserved &copy;</h6>
+      <h6 className="card text-dark bg-warning py-1 mb-0">MIT License : Copyright (&copy;) 2022 theAlphaGuardian</h6>
     </div>
   );
 }
