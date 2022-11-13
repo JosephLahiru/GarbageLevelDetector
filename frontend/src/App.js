@@ -4,6 +4,18 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  const [binList, setBinList] = useState([{}])
+  const [id, setId] = useState('')
+  const [level, setLevel] = useState('')
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/level')
+    .then(res =>{
+      setBinList(res.data)
+    })
+  });
+
   return (
     <div className='App list-group-item justify-content-center
     aligh-items-center mx-auto' style={{"width":"400px",
