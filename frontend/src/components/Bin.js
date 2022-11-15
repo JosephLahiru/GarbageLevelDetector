@@ -24,10 +24,10 @@ function BinItem(props){
                 <div className='bin-top'></div>
                 <div className='bin-body'></div>
 
-                {100>0 && <div className='full-status-4'></div>}
-                {100>25 && <div className='full-status-3'></div>}
-                {100>50 && <div className='full-status-2'></div>}
-                {100>75 && <div className='full-status-1'></div>}
+                {props.bin.level>0 && <div className='full-status-4'></div>}
+                {props.bin.level>25 && <div className='full-status-3'></div>}
+                {props.bin.level>50 && <div className='full-status-2'></div>}
+                {props.bin.level>75 && <div className='full-status-1'></div>}
             </div>
         </center>
 
