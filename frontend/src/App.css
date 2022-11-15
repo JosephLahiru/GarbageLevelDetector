@@ -23,7 +23,6 @@
 }
 
 .bin-body{
-  position: relative;
   width: 145px;
   height: 0;
   border-left: 20px solid transparent;
@@ -34,19 +33,23 @@
 }
 
 .full-status-1{
-    position: relative;
-    width: 130px;
+    position: absolute;
+    bottom: 14%;
+    margin-left: 4.3rem;    
+    width: 100px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 40px solid rgb(100, 7, 0);
-    margin: -45 0 0 0;
+
     z-index: 2;
 }
 
 .full-status-2{
-    position: relative;
-    width: 140px;
+  position: absolute;
+  bottom: 21%;
+  margin-left: 4.1rem;   
+    width: 110px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -56,8 +59,10 @@
 }
 
 .full-status-3{
-    position: relative;
-    width: 150px;
+  position: absolute;
+  bottom: 28%;
+  margin-left: 3.8rem;   
+    width: 120px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -67,8 +72,10 @@
 }
 
 .full-status-4{
-    position: relative;
-    width: 160px;
+  position: absolute;
+  bottom: 35%;
+  margin-left: 3.5rem;   
+    width: 130px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
