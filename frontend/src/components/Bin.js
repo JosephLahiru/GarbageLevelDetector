@@ -20,18 +20,14 @@ function BinItem(props){
         //     </div>
         // </div>
         <center>
-            <div class="main-container">
-                <div class="bin-top"></div>
-                <div class="bin-body"></div>
-                {props.bin.level>0 &&
-                    <div class="full-status-1"></div>
-                }{props.bin.level>25 &&
-                    <div class="full-status-2"></div>
-                }{props.bin.level>50 &&
-                    <div class="full-status-3"></div>
-                }{props.bin.level>75 &&
-                    <div class="full-status-4"></div>
-                }
+            <div className='main-container'>
+                <div className='bin-top'></div>
+                <div className='bin-body'></div>
+
+                {props.bin.level>0 && <div className='full-status-4'></div>}
+                {props.bin.level>25 && <div className='full-status-3'></div>}
+                {props.bin.level>50 && <div className='full-status-2'></div>}
+                {props.bin.level>75 && <div className='full-status-1'></div>}
             </div>
         </center>
 
