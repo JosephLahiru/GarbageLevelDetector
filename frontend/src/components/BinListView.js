@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BinView(props){
     return (
-        <div>
-            <div className="container">
+        <div style={{margin:0}}>
+            {/* <div className="container">
                 <div className="row">
                     {props.binList.map(bin => <BinItem bin={bin}/>)}
                 </div>
-            </div>
+            </div> */}
+            {props.binList.map(bin => <BinItem bin={bin}/>)}
         </div>
     )
 }

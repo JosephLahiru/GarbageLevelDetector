@@ -4,3 +4,75 @@
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.main-container{
+  height: 300px;
+  width: 300px;
+  background-color: azure;
+  padding: 30px;
+  margin: 30px;
+}
+
+.bin-top{
+  position: relative;
+  background-color: rgb(12, 235, 12);
+  width: 220px;
+  height: 40px;
+  border-radius: 15px;
+  z-index: 6;
+}
+
+.bin-body{
+  position: relative;
+  width: 145px;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 200px solid darkgreen;
+  margin: -10 0 0 0;
+  z-index: 2;
+}
+
+.full-status-1{
+    position: relative;
+    width: 130px;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 40px solid rgb(100, 7, 0);
+    margin: -45 0 0 0;
+    z-index: 2;
+}
+
+.full-status-2{
+    position: relative;
+    width: 140px;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 40px solid rgb(197, 157, 27);
+    margin: -85 0 0 0;
+    z-index: 2;
+}
+
+.full-status-3{
+    position: relative;
+    width: 150px;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 40px solid rgb(90, 180, 29);
+    margin: -85 0 0 0;
+    z-index: 2;
+}
+
+.full-status-4{
+    position: relative;
+    width: 160px;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 40px solid rgb(93, 253, 0);
+    margin: -85 0 0 0;
+    z-index: 2;
+}
