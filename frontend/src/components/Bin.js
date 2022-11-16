@@ -18,7 +18,7 @@ function BinItem(props){
                 {props.bin.level>50 && <div className='full-status-3'></div>}
                 {props.bin.level>75 && <div className='full-status-4'></div>}
             </div>
-            <div>
+            <div className='main-container-footer'>
             <button onClick={()=>deleteBinHandler(props.bin.id)}
                     className="btn btn-outline-danger" style={
                         {'borderRadius':'50px'}}>Delete</button>
