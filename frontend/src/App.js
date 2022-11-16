@@ -45,7 +45,7 @@ function App() {
           <BinView binList={binList}/>
         </div>
       </div>
-      <h6 className="card text-dark bg-warning py-1 mb-0">MIT License : Copyright (&copy;) 2022 theAlphaGuardian</h6>
+      <h6 className="card text-dark bg-warning py-1 mb-0" style={{margin:20}}>MIT License : Copyright (&copy;) 2022 theAlphaGuardian</h6>
     </div>
   );
 }

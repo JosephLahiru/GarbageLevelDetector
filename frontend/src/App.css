@@ -6,11 +6,11 @@
 }
 
 .main-container{
-  height: 300px;
+  height: 370px;
   width: 300px;
-  background-color: azure;
-  padding: 30px;
+  background-color: rgb(22, 236, 236);
   margin: 30px;
+  padding-top: 5px;
 }
 
 .bin-top{
@@ -28,58 +28,54 @@
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 200px solid darkgreen;
-  margin: -10 0 0 0;
-  z-index: 2;
 }
 
 .full-status-1{
-    position: absolute;
-    bottom: 14%;
-    margin-left: 4.3rem;    
+    position: relative;
+    bottom: 50px;
     width: 100px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 40px solid rgb(100, 7, 0);
-
-    z-index: 2;
 }
 
 .full-status-2{
-  position: absolute;
-  bottom: 21%;
-  margin-left: 4.1rem;   
+  position: relative;
+  bottom: 137px;
     width: 110px;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 40px solid rgb(197, 157, 27);
-    margin: -85 0 0 0;
-    z-index: 2;
 }
 
 .full-status-3{
-  position: absolute;
-  bottom: 28%;
-  margin-left: 3.8rem;   
-    width: 120px;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 40px solid rgb(90, 180, 29);
-    margin: -85 0 0 0;
-    z-index: 2;
+  position: relative;
+  bottom: 225px;
+  width: 120px;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 40px solid rgb(90, 180, 29);
 }
 
 .full-status-4{
-  position: absolute;
-  bottom: 35%;
-  margin-left: 3.5rem;   
-    width: 130px;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 40px solid rgb(93, 253, 0);
-    margin: -85 0 0 0;
-    z-index: 2;
+  position: relative;
+  bottom: 312px;
+  width: 130px;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 40px solid rgb(93, 253, 0);
+}
+
+.mybtn{
+  position: relative;
+  bottom: 100px;
+}
+
+.main-container-footer{
+  background-color: aquamarine;
+  padding: 10px;
 }
