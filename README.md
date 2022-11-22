@@ -20,6 +20,9 @@ in Ubuntu
 ### install dependencies
 ``` pipenv install -r requirements.txt```
 
+### After that add .env file to the /backend, make sure you add your mongo db connection link
+```MONGO_URI="mongodb+srv://username:password@cluster0.gwqfihf.mongodb.net/?retryWrites=true&w=majority"```
+
 ### startup the FAST-API backend
 ``` uvicorn main:app ```
 
