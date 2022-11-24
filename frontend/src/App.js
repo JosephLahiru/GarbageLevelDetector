@@ -18,10 +18,14 @@ function App() {
   });
 
   const addBinHandler = () => {
-    axios.post('http://localhost:8000/api/bin/', {'id':id,
-  'level':level}).then(res => console.log(res))
+    if (id.length === 0) {
+      console.log('string is empty');
+    }
+    else{
+      axios.post('http://localhost:8000/api/bin/', {'id':id,
+    'level':level}).then(res => console.log(res))
+    }
   };
-
   return (
     <div className='App list-group-item justify-content-center
     aligh-items-center mx-auto' style={{"width":"600px",
