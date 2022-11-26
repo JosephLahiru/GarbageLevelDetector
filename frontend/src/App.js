@@ -9,6 +9,7 @@ function App() {
   const [binList, setBinList] = useState([{}])
   const [id, setId] = useState('')
   const [level, setLevel] = useState('')
+  const [type, setType] = useState('')
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/bin')
@@ -23,10 +24,11 @@ function App() {
     }
     else{
       axios.post('http://localhost:8000/api/bin/', {'id':id,
-    'level':level}).then(res => console.log(res))
+    'level':level, 'type':type}).then(res => console.log(res))
 
       setId('');
       setLevel('');
+      setType('');
     }
   };
   return (
@@ -42,6 +44,7 @@ function App() {
         <span className="card-text">
           <input value={id} className="mb-2 form-control idIn" refonChange={event => setId(event.target.value)} placeholder="ID"/>
           <input value={level} className="mb-2 form-control levelIn" onChange={event => setLevel(event.target.value)} placeholder="LEVEL"/>
+          <input value={type} className="mb-2 form-control typeIn" onChange={event => setType(event.target.value)} placeholder="TYPE"/>
 
           <button className="btn btn-outline-primary mx-2 mb-3" style={
           {'borderRadius':"50px", "font-weight":"bold"}} onClick={addBinHandler}>Add Bin</button>

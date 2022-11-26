@@ -50,8 +50,8 @@ async def post_bin(bin:Bin):
     raise HTTPException(400, "Bad Request")
 
 @app.put("/api/bin{id}/", response_model=Bin)
-async def put_bin(id:str, level:str):
-    response = await update_bin(id, level)
+async def put_bin(id:str, level:str, type:str):
+    response = await update_bin(id, level, type)
     if(response):
         return response
     raise HTTPException(404, f"There is no Bin item in this ID : {id}")
