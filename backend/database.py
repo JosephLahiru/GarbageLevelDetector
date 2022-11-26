@@ -27,9 +27,9 @@ async def create_bin(bin):
     result = await collection.insert_one(document)
     return result
 
-async def update_bin(id, level):
+async def update_bin(id, level, type):
     await collection.update_one({"id":id}, {"$set":{
-        "level":level}})
+        "level":level, "type":type}})
     document = await collection.find_one({"id":id})
     return document
 
