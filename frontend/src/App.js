@@ -4,6 +4,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BinView from './components/BinListView';
 
+const TYPES = ['General Waste', 'Recycling Paper and Cardboard', 'Cans and Bottles', 'Recyclable Food'];
+
 function App() {
 
   const [binList, setBinList] = useState([{}])
@@ -28,7 +30,7 @@ function App() {
 
       setId('');
       setLevel('');
-      setType('');
+      // setType('');
     }
   };
   return (
@@ -44,7 +46,10 @@ function App() {
         <span className="card-text">
           <input value={id} className="mb-2 form-control idIn" refonChange={event => setId(event.target.value)} placeholder="ID"/>
           <input value={level} className="mb-2 form-control levelIn" onChange={event => setLevel(event.target.value)} placeholder="LEVEL"/>
-          <input value={type} className="mb-2 form-control typeIn" onChange={event => setType(event.target.value)} placeholder="TYPE"/>
+          {/* <input value={type} className="mb-2 form-control typeIn" onChange={event => setType(event.target.value)} placeholder="TYPE"/> */}
+
+          <select value={type} className="mb-2 form-control form-select" onChange={event => setType(event.target.value)}>
+      	{TYPES.map((type)=>(<option key={type}>{type}</option>))}</select>
 
           <button className="btn btn-outline-primary mx-2 mb-3" style={
           {'borderRadius':"50px", "font-weight":"bold"}} onClick={addBinHandler}>Add Bin</button>
