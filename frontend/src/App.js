@@ -15,8 +15,6 @@ function App() {
   const [level, setLevel] = useState('')
   const [type, setType] = useState('')
 
-
-
   useEffect(() => {
     axios.get('http://localhost:8000/api/bin')
     .then(res =>{
@@ -25,11 +23,22 @@ function App() {
   });
 
   const addBinHandler = () => {
-    if (id.length === 0 && level.length===0 && type.length=== 0) {
-      //console.log('string is empty');
-      toast.error('ඔක්කොමට කලින් ෆෝර්ම් එක ෆිල් කරලා ඉදපන් ', {
+    if (id.length === 0) {
+      toast.error('Please enter a Valid ID!!!', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+
+    }else if(level.length === 0 || (level > 100 || level < 0)){
+      toast.error('Please enter a Valid Percentage!!!', {
+        position: "top-right",
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -58,7 +67,7 @@ function App() {
       <div className="card-body">
         <h5 className="card text-white bg-dark mb-3">Add A Garbage Bin</h5>
         <span className="card-text">
-          <input value={id} className="mb-2 form-control idIn" refonChange={event => setId(event.target.value)} placeholder="ID"/>
+          <input value={id} className="mb-2 form-control idIn" onChange={event => setId(event.target.value)} placeholder="ID"/>
           <input value={level} className="mb-2 form-control levelIn" onChange={event => setLevel(event.target.value)} placeholder="LEVEL"/>
           {/* <input value={type} className="mb-2 form-control typeIn" onChange={event => setType(event.target.value)} placeholder="TYPE"/> */}
 
@@ -80,7 +89,7 @@ function App() {
               pauseOnHover
               theme="light"
             />
-<ToastContainer />
+        <ToastContainer />
         <h5 className="card text-white bg-dark mb-3">Your Bins</h5>
         <div>
           <BinView binList={binList}/>
