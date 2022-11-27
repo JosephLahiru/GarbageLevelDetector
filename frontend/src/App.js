@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BinView from './components/BinListView';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TYPES = ['General Waste', 'Recycling Paper and Cardboard', 'Cans and Bottles', 'Recyclable Food'];
 
@@ -13,6 +15,8 @@ function App() {
   const [level, setLevel] = useState('')
   const [type, setType] = useState('')
 
+
+
   useEffect(() => {
     axios.get('http://localhost:8000/api/bin')
     .then(res =>{
@@ -21,8 +25,18 @@ function App() {
   });
 
   const addBinHandler = () => {
-    if (id.length === 0) {
-      console.log('string is empty');
+    if (id.length === 0 && level.length===0 && type.length=== 0) {
+      //console.log('string is empty');
+      toast.error('ඔක්කොමට කලින් ෆෝර්ම් එක ෆිල් කරලා ඉදපන් ', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
     else{
       axios.post('http://localhost:8000/api/bin/', {'id':id,
@@ -54,7 +68,19 @@ function App() {
           <button className="btn btn-outline-primary mx-2 mb-3" style={
           {'borderRadius':"50px", "font-weight":"bold"}} onClick={addBinHandler}>Add Bin</button>
         </span>
-
+        <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+<ToastContainer />
         <h5 className="card text-white bg-dark mb-3">Your Bins</h5>
         <div>
           <BinView binList={binList}/>
