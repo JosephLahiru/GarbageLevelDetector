@@ -56,6 +56,17 @@ function App() {
       setId('');
       setLevel('');
       // setType('');
+
+      toast.success('Bin Added Successfully!!!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
   return (
