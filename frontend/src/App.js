@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const TYPES = ['General Waste', 'Recycling Paper and Cardboard', 'Cans and Bottles', 'Recyclable Food'];
 
+const TYPES = ['General Waste', 'Recycling Paper and Cardboard', 'Cans and Bottles', 'Recyclable Food'];
+
 function App() {
 
   const [binList, setBinList] = useState([{}])
