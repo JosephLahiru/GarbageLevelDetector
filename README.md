@@ -1,6 +1,7 @@
 # GarbageLevelDetector
 This is a web platfrom to detect what garbage cans have been filled up
 ### mongodb competition link : https://dev.to/thealphaguardian/mongodb-atlas-hackathon-2022-on-dev-5aoe
+### link to live app : http://13.229.182.57/
 
 ## open a terminal window
 ### First clone the repository
